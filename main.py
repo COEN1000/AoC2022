@@ -6,7 +6,7 @@ def day1(filename: str):
     elves = []
     calories = 0
 
-    with open(os.path.join(sys.path[0],filename), "r") as f:
+    with open(filename, "r") as f:
         while True:
             line = f.readline()
             if not line:
@@ -28,7 +28,7 @@ def day2(filename: str):
     PT2_STRAT = dict(A = dict(X = 4, Y = 8, Z = 3),B = dict(X = 1, Y = 5, Z = 9),C = dict(X = 7, Y = 2, Z = 6))
     PT1_STRAT = dict(A = dict(X = 3, Y = 4, Z = 8),B = dict(X = 1, Y = 5, Z = 9),C = dict(X = 2, Y = 6, Z = 7))
 
-    with open(os.path.join(sys.path[0],filename), "r") as f:
+    with open(filename, "r") as f:
         
         lines = f.readlines()
         pt1_score = 0

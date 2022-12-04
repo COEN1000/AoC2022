@@ -38,7 +38,13 @@ def day2(filename: str):
             pt2_score += PT2_STRAT[line[0]][line[2]]
         print(pt1_score, pt2_score)
 
+def day3(filename: str):
+    
+    with open(filename, "r") as f:        
+        rucksack = f.readline
+
 
 if __name__ == '__main__':
     day1("input/day1.txt")
     day2("input/day2.txt")
+    day3("input/day3.txt")

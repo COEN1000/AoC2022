@@ -2,6 +2,7 @@ import numpy as np
 import os,sys
 from difflib import SequenceMatcher
 import difflib
+from collections import Counter
 
 def day1(filename: str):
     elves = []
@@ -56,6 +57,18 @@ def day3(filename: str):
                 sum+=ord(str1[match.a])-96
 
     print("D3 part1:", sum)
+
+    with open(filename, "r") as f:
+        lines = f.readlines
+        i = 0
+        sum = 0
+        for _ in range(10) :
+            lin = lines[i]+lines[i+1]+lines[i+2]
+            c= Counter(lin).most_common(1)
+            sum += c[1]
+            i+=3
+        
+ 
 
 if __name__ == '__main__':
     #day1("input/day1.txt")
